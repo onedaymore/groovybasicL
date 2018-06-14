@@ -1,0 +1,18 @@
+1、安装git
+2、本地建好文件夹，git bash here
+3、git init
+4、github上新建仓库
+5、配置公钥
+   5-1 ssh-keygen -t rsa -C "your_email@example.com"  全部回车，生产私钥，公钥
+   5-2 github 网站上配置公钥
+   5-3 在后台启动 | ssh-agent eval $(ssh-agent -s)
+   5-4 将SSH私钥添加到 ssh-agent |  ssh-add C:/Users/DELL/.ssh/id_rsa(反斜杠)
+6、ssh -T git@github.com 测试链接是否成功
+7、git clone  {ssh地址}
+8、git add *
+9、git status 查看有哪些修改
+10、其他配置 “不认识这个用户” 会提示
+  10-1 git config --global user.email "andayfour@gmail.com"
+  10-2 git config --global user.name "onedaymore"
+11、git commit -m "描述" 本地提交
+12、git push origin master 提交到远程【master】
